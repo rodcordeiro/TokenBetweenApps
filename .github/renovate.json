@@ -1,6 +1,6 @@
 {
   "branchPrefix": "updates/",
-  "baseBranches": "dependenciesValidation",
+  "baseBranches": ["main"],
   "packageRules": [
     {
       "updateTypes": [
