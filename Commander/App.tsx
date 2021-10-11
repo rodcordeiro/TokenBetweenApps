@@ -1,14 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   SafeAreaView,
   StatusBar,
@@ -16,10 +6,30 @@ import {
   Text,
   View,
   TextInput,
+  TouchableOpacity,
 } from 'react-native';
+
+import Serializer from './utils/token';
+import base64 from 'react-native-base64';
 
 const App = () => {
   const [name, setName] = useState<string>('');
+  const [dog, setDog] = useState<string>('');
+  const [cat, setCat] = useState<string>('');
+  const handleSubmit = React.useCallback(() => {
+    const params = {
+      name,
+      dog,
+      cat,
+    };
+    const token = Serializer(params),
+      info = JSON.parse(base64.decode(token));
+    console.log({ ...params, token, info });
+
+    setName('');
+    setDog('');
+    setCat('');
+  }, [cat, dog, name]);
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle={'dark-content'} />
@@ -39,20 +49,23 @@ const App = () => {
           style={styles.input}
         />
         <TextInput
-          placeholder="Insert your name here."
-          value={name}
-          onChangeText={setName}
-          autoFocus={true}
+          placeholder="Insert your dog name here."
+          value={dog}
+          onChangeText={setDog}
           style={styles.input}
         />
         <TextInput
-          placeholder="Insert your name here."
-          value={name}
-          onChangeText={setName}
-          autoFocus={true}
+          placeholder="Insert your cat name here."
+          value={cat}
+          onChangeText={setCat}
           style={styles.input}
         />
       </View>
+      <TouchableOpacity onPress={handleSubmit} style={styles.buttonContainer}>
+        <View style={styles.buttonArea}>
+          <Text>Send</Text>
+        </View>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };
@@ -86,6 +99,15 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
     color: 'black',
+  },
+  buttonContainer: {
+    marginTop: 30,
+  },
+  buttonArea: {
+    paddingVertical: 20,
+    paddingHorizontal: 40,
+    backgroundColor: '#0099ff',
+    borderRadius: 7.5,
   },
 });
 
