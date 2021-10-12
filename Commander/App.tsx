@@ -7,6 +7,7 @@ import {
   View,
   TextInput,
   TouchableOpacity,
+  Linking,
 } from 'react-native';
 
 import Serializer from './utils/token';
@@ -16,20 +17,21 @@ const App = () => {
   const [name, setName] = useState<string>('');
   const [dog, setDog] = useState<string>('');
   const [cat, setCat] = useState<string>('');
+
   const handleSubmit = React.useCallback(() => {
     const params = {
       name,
       dog,
       cat,
     };
-    const token = Serializer(params),
-      info = JSON.parse(base64.decode(token));
-    console.log({ ...params, token, info });
+    const token = Serializer(params);
 
     setName('');
     setDog('');
     setCat('');
+    Linking.openURL(`rodCord://${token}`);
   }, [cat, dog, name]);
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle={'dark-content'} />
