@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import React, { memo } from 'react';
-import { NavigationContainer, RouteProp } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 export type RootStackParamList = {
