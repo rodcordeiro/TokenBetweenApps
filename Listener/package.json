@@ -13,7 +13,7 @@
   "dependencies": {
     "@react-navigation/native": "6.0.6",
     "react": "17.0.2",
-    "react-native": "0.67.0",
+    "react-native": "0.67.1",
     "react-native-base64": "0.2.1",
     "react-native-gesture-handler": "1.10.3",
     "react-native-safe-area-context": "3.3.2",
