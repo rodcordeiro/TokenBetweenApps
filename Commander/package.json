@@ -16,7 +16,7 @@
     "react-native-base64": "0.2.1"
   },
   "devDependencies": {
-    "@babel/core": "7.17.4",
+    "@babel/core": "7.17.5",
     "@babel/runtime": "7.17.2",
     "@react-native-community/eslint-config": "2.0.0",
     "@types/jest": "26.0.24",
