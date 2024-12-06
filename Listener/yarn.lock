@@ -2998,14 +2998,14 @@
   dependencies:
     react-native "*"
 
-"@types/react-test-renderer@17.0.9":
-  version "17.0.9"
-  resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-17.0.9.tgz#da6d06f3f37eefab39386c390140374dc5db5b33"
-  integrity sha512-bOfxcu5oZ+KxvACScbkTwZ4eGCtZFTz4VZCOVAIfGbThxqiXSIGipKVG8ubaYBXquUSQROzNIUzviWdSnnAlzg==
+"@types/react-test-renderer@19.0.0":
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-19.0.0.tgz#4cdeace7561bf359ee167f51704f420c07d4bd8d"
+  integrity sha512-qDVnNybqFm2eZKJ4jD34EvRd6VHD67KjgnWaEMM0Id9L22EpWe3nOSVKHWL1XWRCxUWe3lhXwlEeCKD1BlJCQA==
   dependencies:
-    "@types/react" "^17"
+    "@types/react" "*"
 
-"@types/react@^17":
+"@types/react@*", "@types/react@^17":
   version "17.0.83"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.83.tgz#b477c56387b74279281149dcf5ba2a1e2216d131"
   integrity sha512-l0m4ArKJvmFtR4e8UmKrj1pB4tUgOhJITf+mADyF/p69Ts1YAR/E+G9XEM0mHXKVRa1dQNHseyyDNzeuAXfXQw==
